@@ -1,6 +1,6 @@
 [server]
 
-headless = True
+headless = true
 
 port = 1000
 
