@@ -1,3 +1,2 @@
 
 streamlit == 1.21.0
-conda == 23.3.1
