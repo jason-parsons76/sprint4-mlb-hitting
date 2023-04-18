@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv('C:/Users/jason_ef59wex/anaconda3/envs/myenv/projects/baseball_hitting.csv')
+df = pd.read_csv('baseball_hitting.csv')
 
 
 df = df.rename(columns ={'Player name' : 'player_name', 'At-bat' : 'at_bats', 'Games' : 'games', 'Runs' : 'runs', 'Hits' : 'hits', 'Double (2B)' : 'doubles', 'third baseman' : 'triples', 'home run': 'home_runs',
