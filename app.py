@@ -9,11 +9,23 @@ df = pd.read_csv('baseball_hitting_pp.csv')
 
 
 #creates a title for our app
-st.title('Major Leauge Baseball Hitting Stats Throughout Baseball History')
+st.title('Major Leauge Baseball Hitting Stats Throughout History')
+st.write('')
+st.subheader('Introduction')
+st.write("Have you ever wondered who has the most homeruns in MLB history or where your favorite player ranks on the all-time hits list? This is app will help you find out. Simply choose the stat you want to see.")
+st.write('')
 st.divider()
 st.write('')
 
 
+#Showing the DataFrame 
+st.header('MLB Hitting Stats')
+st.divider()
+st.write('')
+st.subheader('DataFrame We Are Using')
+st.dataframe(df)
+st.write()
+st.divider()
 
 
 
