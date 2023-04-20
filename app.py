@@ -1,30 +1,25 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-
+# Reading the preprocessed DataFraame
 df = pd.read_csv('baseball_hitting_pp.csv')
 
-
-
-
-
-
-
-
-st.header('MLB Hitting Stats')
+#creates a title for our app
+st.title('Major Leauge Baseball Hitting Stats Throughout Baseball History')
 st.divider()
 st.write('')
-st.subheader('DataFrame We Are Using')
-st.dataframe(df)
-st.write()
-st.divider()
+
+
+
+
+
 
 
 st.subheader('Select a stat to show the amount each player had with the amount of games played')
-
+# Creating our radio selection.
 radio_selection = []
 stat = st.radio('Choose a stat', ('at bats', 'hits', 'doubles', 'triples', 'home runs', 'runs', 'walks', 'strikeouts', 'batting average'))
-
+# loop to determine what radio_selection =
 if stat == 'at bats':
     radio_selection = df['at_bats'] 
 elif stat == 'hits':
@@ -43,7 +38,9 @@ elif stat == 'strikeouts':
     radio_selection = df['strikeouts']
 else:
     radio_selection = df['AVG']
-                           
+
+
+# Creates a scatter plot based on our radio selection.
 fig = px.scatter(df, x= radio_selection , y  ='games', color ='player_name')
 st.plotly_chart(fig, use_container_width=True)
 
@@ -53,6 +50,8 @@ st.write('')
 st.write('')
 st.subheader('You can also click the box below to show a histogram of the stat by position')
 
+
+#Gives an option to select a checkbox to view our radio selection stat as a histogram by position.
 checkbox = st.checkbox('Click to view a histogram by position')
 
 if checkbox:
