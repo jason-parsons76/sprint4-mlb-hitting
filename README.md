@@ -7,4 +7,4 @@ The user can select the stat they would like to see then the user can see the st
 *This app is running very slow but it does work.* I preprocessed the dataframe in hopes that would spped up the app but it has no apparant change on the speed. I also removed the visual DataFrame but no resolve. Maybe it runs slow because I'm using a free version of Render??
 
 
-To see this app got to https://sprint4-mlb-hitting.onrender.com
+To see this app go to https://sprint4-mlb-hitting.onrender.com

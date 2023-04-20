@@ -1,8 +1,12 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+
+
 # Reading the preprocessed DataFraame
 df = pd.read_csv('baseball_hitting_pp.csv')
+
+
 
 #creates a title for our app
 st.title('Major Leauge Baseball Hitting Stats Throughout Baseball History')
