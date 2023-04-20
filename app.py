@@ -2,17 +2,13 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-df = pd.read_csv('baseball_hitting.csv')
+df = pd.read_csv('baseball_hitting_pp.csv')
 
 
-df = df.rename(columns ={'Player name' : 'player_name', 'At-bat' : 'at_bats', 'Games' : 'games', 'Runs' : 'runs', 'Hits' : 'hits', 'Double (2B)' : 'doubles', 'third baseman' : 'triples', 'home run': 'home_runs',
-'run batted in' : 'RBI', 'a walk' : 'walks', 'Strikeouts' : 'strikeouts', 'stolen base' : 'stolen_bases', 'Caught stealing' : 'caught_stealing', 'On-base Percentage' : 'on_base_%', 'Slugging Percentage' : 'slugging_%',
-'On-base Plus Slugging' : 'OPS'})
-
-df = df.dropna()
 
 
-df['strikeouts'] = df['strikeouts'].astype('int')
+
+
 
 
 st.header('MLB Hitting Stats')
