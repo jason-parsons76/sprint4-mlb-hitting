@@ -58,7 +58,7 @@ else:
 
 # Creates a scatter plot based on our radio selection.
 fig = px.scatter(df, x= radio_selection , y  ='games', color ='player_name')
-st.plotly_chart(fig, use_container_width=True)
+fig.show()
 
 st.write('')
 st.divider()
