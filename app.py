@@ -58,7 +58,7 @@ else:
 
 # Creates a scatter plot based on our radio selection.
 fig = px.scatter(df, x= radio_selection , y  ='games', color ='player_name')
-fig.show()
+fig.plotly_chart(fig, use_container_width=True)
 
 st.write('')
 st.divider()
@@ -68,11 +68,12 @@ st.subheader('You can also click the box below to show a histogram of the stat b
 
 
 #Gives an option to select a checkbox to view our radio selection stat as a histogram by position.
+fig2= px.histogram(df, x= radio_selection, color='position')
+
 checkbox = st.checkbox('Click to view a histogram by position')
 
 if checkbox:
-    fig = px.histogram(df, x= radio_selection, color='position')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig2, use_container_width=True)
    
 
 
